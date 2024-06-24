@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.png';
-import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon1 from '../assets/img/linkedin.svg';
 import navIcon2 from '../assets/img/github3.png';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-import Pdf from '../assets/Rahul Maligi_Resume_V10.pdf';
+import Pdf from '../assets/Ryan_Parappuram_resume.pdf';
 export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
@@ -48,8 +48,8 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://linkedin.com/in/rahul-maligi" target="_blank" rel="noopener,noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="https://github.com/maligir" target="_blank" rel="noopener,noreferrer"><img src={navIcon2} alt="GitHub" /></a>
+                <a href="https://www.linkedin.com/in/ryanparappuram/" target="_blank" rel="noopener,noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
+                <a href="https://github.com/rparappuram" target="_blank" rel="noopener,noreferrer"><img src={navIcon2} alt="GitHub" /></a>
               </div>
                 <button className="vvd" onClick={() => window.open(Pdf, '_blank', 'noopener,noreferrer')}><span>Download CV</span></button>
             </span>

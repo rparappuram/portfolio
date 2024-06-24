@@ -17,6 +17,9 @@ import spending from "../assets/img/spending_score.jpg";
 import face_id from "../assets/img/face_id.jpeg";
 import ctrl_f from "../assets/img/ctrl_f.jpeg";
 import ahg from "../assets/img/ahg.jpg";
+import heart from "../assets/img/heart.webp"
+import twitter from "../assets/img/twitter.png"
+import wine from "../assets/img/wine.png"
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -24,120 +27,120 @@ export const Projects = () => {
 
   const tab1 = [
     {
-      title: "Autotuner",
-      description: "Speech & Audio Processing",
-      imgUrl: autotuner,
-      linkUrl: "https://github.com/maligir/autotuner",
-    },
-    {
-      title: "MFCC Pipeline",
-      description: "Speech & Audio Processing",
-      imgUrl: mfcc,
-      linkUrl: "https://github.com/maligir/mfcc_acoustic_extraction_pipeline",
-    },
-    {
-      title: "Phoneme Classification Model",
-      description: "Speech & Audio Processing",
-      imgUrl: phoneme,
-      linkUrl: "https://github.com/maligir/phoneme_classification_model",
-    },
-    {
-      title: "HMM-Based Word Recognition",
-      description: "Speech & Audio Processing",
-      imgUrl: hmm,
-      linkUrl: "https://github.com/maligir/hmm-based_isolated_word_recognizer",
-    },
-    {
-      title: "Spot Me A Leash",
-      description: "Human Robot Interaction",
-      imgUrl: spot,
-      linkUrl: "https://github.com/maligir/spot_me_a_leash",
-    },
-    {
-      title: "ROS Transformations",
-      description: "Autonomous Mobile Robotics",
-      imgUrl: transform,
-      linkUrl: "https://github.com/maligir/ROS-transformations",
-    },
-  ];
-
-  const tab2 = [
-    {
-      title: "OpenCV ROS",
-      description: "Autonomous Mobile Robotics",
-      imgUrl: opencv,
-      linkUrl: "https://github.com/maligir/openCV-ROS",
-    },
-    {
-      title: "Tick-Tac-Toe Bot Java",
-      description: "Artificial Intelligence",
-      imgUrl: tttjava,
-      linkUrl: "https://github.com/maligir/Tic-Tac-Toe_Java",
-    },
-    {
-      title: "Tic Tac Toe Bot Python",
-      description: "Artificial Intelligence",
-      imgUrl: tttpython,
-      linkUrl: "https://github.com/maligir/Tic-Tac-Toe_Python",
-    },
-    {
-      title: "Stormbound PVP Bot",
-      description: "Artificial Intelligence",
-      imgUrl: stormbound,
-      linkUrl: "https://github.com/maligir/Stormbound_Project",
-    },
-    {
-      title: "FamiLead",
-      description: "Software Engineering",
-      imgUrl: familead,
-      linkUrl: "https://github.com/maligir/FamiLead",
-    },
-    {
-      title: "Spending Score Model",
+      title: "Stock Trading Bot",
       description: "Machine Learning",
       imgUrl: spending,
-      linkUrl: "https://github.com/maligir/spending_score_model",
+      linkUrl: "https://github.com/rparappuram/AlpacaTradingAlgo",
+    },
+    {
+      title: "LLM Chatbot",
+      description: "Artificial Intelligence",
+      imgUrl: hmm,
+      linkUrl: "https://github.com/rparappuram/python-chatbot",
+    },
+    {
+      title: "Social Security Administration Name Analysis",
+      description: "Machine Learning",
+      imgUrl: opencv,
+      linkUrl: "https://github.com/rparappuram/SSA-Name-Analysis",
+    },
+    {
+      title: "Anonymous Confessions",
+      description: "Software Engineering",
+      imgUrl: heart,
+      linkUrl: "https://github.com/rparappuram/Anonymous-Confessions",
+    },
+    {
+      title: "Twitter Clone",
+      description: "Software Engineering",
+      imgUrl: twitter,
+      linkUrl: "https://github.com/rparappuram/twitter-react-clone",
+    },
+    {
+      title: "Wine World",
+      description: "Software Engineering",
+      imgUrl: wine,
+      linkUrl: "https://github.com/rparappuram/wineworld",
     },
   ];
 
-  const tab3 = [
-    {
-      title: "Portfolio Website",
-      description: "Software Engineering",
-      imgUrl: portfolio,
-      linkUrl: "https://github.com/maligir/portfolio",
-    },
-    {
-      title: "Face ID Login",
-      description: "Computer Vision & Software Engineering",
-      imgUrl: face_id,
-      linkUrl: "https://github.com/maligir/face_id_login",
-    },
-    {
-      title: "Enhanced Ctrl F",
-      description: "Artificial Intelligence & Software Engineering",
-      imgUrl: ctrl_f,
-      linkUrl: "https://github.com/maligir/enhanced_ctrl_f",
-    },
-    {
-      title: "AHG Direction Guide",
-      description: "Artificial Intelligence & Robotics",
-      imgUrl: ahg,
-      linkUrl: "",
-    },
-    {
-      title: "Exciting New Projects",
-      description: "Coming Soon!",
-      imgUrl: hacker,
-      linkUrl: "",
-    },
-    // {
-    //   title: "Exciting New Projects",
-    //   description: "Coming Soon!",
-    //   imgUrl: hacker,
-    //   linkUrl: "",
-    // },
-  ];
+  // const tab2 = [
+  //   {
+  //     title: "OpenCV ROS",
+  //     description: "Autonomous Mobile Robotics",
+  //     imgUrl: opencv,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Tick-Tac-Toe Bot Java",
+  //     description: "Artificial Intelligence",
+  //     imgUrl: tttjava,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Tic Tac Toe Bot Python",
+  //     description: "Artificial Intelligence",
+  //     imgUrl: tttpython,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Stormbound PVP Bot",
+  //     description: "Artificial Intelligence",
+  //     imgUrl: stormbound,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "FamiLead",
+  //     description: "Software Engineering",
+  //     imgUrl: familead,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Spending Score Model",
+  //     description: "Machine Learning",
+  //     imgUrl: spending,
+  //     linkUrl: "",
+  //   },
+  // ];
+
+  // const tab3 = [
+  //   {
+  //     title: "Portfolio Website",
+  //     description: "Software Engineering",
+  //     imgUrl: portfolio,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Face ID Login",
+  //     description: "Computer Vision & Software Engineering",
+  //     imgUrl: face_id,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Enhanced Ctrl F",
+  //     description: "Artificial Intelligence & Software Engineering",
+  //     imgUrl: ctrl_f,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "AHG Direction Guide",
+  //     description: "Artificial Intelligence & Robotics",
+  //     imgUrl: ahg,
+  //     linkUrl: "",
+  //   },
+  //   {
+  //     title: "Exciting New Projects",
+  //     description: "Coming Soon!",
+  //     imgUrl: hacker,
+  //     linkUrl: "",
+  //   },
+  //   // {
+  //   //   title: "Exciting New Projects",
+  //   //   description: "Coming Soon!",
+  //   //   imgUrl: hacker,
+  //   //   linkUrl: "",
+  //   // },
+  // ];
 
   return (
     <section className="project" id="project">
@@ -168,7 +171,8 @@ export const Projects = () => {
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
                     <Row>
-                        {
+                    <p>In Progress! Exciting New Projects To Be Released Soon :)</p>
+                        {/* {
                           tab2.map((tab2, index) => {
                             return (
                               <ProjectCard
@@ -177,13 +181,13 @@ export const Projects = () => {
                                 />
                             )
                           })
-                        }
+                        } */}
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      {/* <p>In Progress! Exciting New Projects To Be Released Soon :)</p> */}
                       <Row>
-                        {
+                      <p>In Progress! Exciting New Projects To Be Released Soon :)</p>
+                        {/* {
                           tab3.map((tab3, index) => {
                             return (
                               <ProjectCard
@@ -192,7 +196,7 @@ export const Projects = () => {
                                 />
                             )
                           })
-                        }
+                        } */}
                       </Row>
                     </Tab.Pane>
                   </Tab.Content>

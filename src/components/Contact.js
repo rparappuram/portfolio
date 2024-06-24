@@ -28,8 +28,8 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    emailjs.init("qCCnCpPfISaMtCqjl")
-    emailjs.send("service_nl6isbc", "template_arui2rm", formDetails)
+    emailjs.init("LoNLEr5inE4cqGDYW")
+    emailjs.send("service_1edexjv", "template_h3w0og2", formDetails)
     .then(function(result) {
       setStatus({ succes: true, message: 'Message sent successfully'});
     }, function(error) {

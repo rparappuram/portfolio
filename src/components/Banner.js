@@ -4,7 +4,8 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import Pdf from '../assets/Rahul Maligi_Resume_V10.pdf';
+import Pdf from '../assets/Ryan_Parappuram_resume.pdf';
+
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full Stack Engineer", "Artificial Intelligence Developer", "Robotics Researcher" ];
+  const toRotate = [ "Full Stack Engineer", "Artificial Intelligence Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -57,13 +58,16 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Rahul |`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am a senior majoring in Computer Science at the University of Texas at Austin. 
-                    I plan to graduate by May 2024 and begin my Masters Degree in Computer Science 
-                    in August 2024 while working full time in the industry. I am a 
-                    passionate worker seeking to broaden my knowledge in the software engineering and 
-                    artificial intelligence fields as well as gain experience in the workforce by 
-                    obtaining internships and jobs.</p>
+                <h1>Hi! I'm Ryan</h1>
+                <h2><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h2>
+                  <p>
+                    I'm a senior majoring in Computer Science at the University of Texas at Austin, 
+                    with a minor in Business and a certificate in Applied Statistical Modeling. 
+                    I will graduate with  my master's degree by May 2026 through the integrated program, 
+                    which I began in 2024. My passion lies at the intersection of software engineering, 
+                    artificial intelligence, and finance, and I'm eager to expand my expertise and practical 
+                    skills through internships and professional opportunities.
+                  </p>
                   <button onClick={() => window.open(Pdf, '_blank', 'noopener,noreferrer')}>Download CV <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>

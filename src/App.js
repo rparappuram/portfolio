@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
@@ -14,9 +13,9 @@ function App() {
     <div className="App">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Rahul's Portfolio</title>
+        <title>Ryan's Portfolio</title>
         <link rel="canonical" href="http://mysite.com/example" />
-        <meta name="description" content="Join me in my adventures as a passionate programmer." />
+        <meta name="description" content="Develop with me!" />
       </Helmet>
       <NavBar />
       <Banner />
