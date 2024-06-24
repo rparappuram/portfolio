@@ -42,3 +42,6 @@ jobs:
 
     - name: Set permissions
       run: ssh rpara@kant.cs.utexas.edu 'chmod -R 755 /u/rpara/public_html/*'
+
+    - name: Verify deployment
+      run: ssh rpara@kant.cs.utexas.edu 'ls -l /u/rpara/public_html/'

@@ -1,5 +1,6 @@
 {
   "name": "personal-portfolio",
+  "homepage": "https://cs.utexas.edu/~rpara",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
