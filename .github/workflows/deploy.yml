@@ -35,7 +35,7 @@ jobs:
     - name: Add server to known hosts
       run: |
         mkdir -p ~/.ssh
-        ssh-keyscan cs.utexas.edu >> ~/.ssh/known_hosts
+        ssh-keyscan kant.cs.utexas.edu >> ~/.ssh/known_hosts
 
     - name: Sync files to server
       run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./build/ rpara@kant.cs.utexas.edu:/u/rpara/public_html/
