@@ -30,7 +30,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Sync files to server
-        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./build/ rpara@cs.utexas.edu:/u/rpara/public_html/
+        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./build/ rpara@kant.cs.utexas.edu:/u/rpara/public_html/
 
       - name: Set permissions
         run: ssh rpara@cs.utexas.edu 'chmod -R 755 /u/rpara/public_html/*'
