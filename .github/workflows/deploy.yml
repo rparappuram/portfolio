@@ -41,4 +41,4 @@ jobs:
       run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./build/ rpara@kant.cs.utexas.edu:/u/rpara/public_html/
 
     - name: Set permissions
-      run: ssh rpara@cs.utexas.edu 'chmod -R 755 /u/rpara/public_html/*'
+      run: ssh rpara@kant.cs.utexas.edu 'chmod -R 755 /u/rpara/public_html/*'
