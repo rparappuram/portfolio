@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
-import Pdf from '../assets/Ryan_Parappuram_resume.pdf';
-
+import { ArrowRightCircle } from "react-bootstrap-icons";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
+import Pdf from "../assets/Ryan_Parappuram_resume.pdf";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [delta, setDelta] = useState(100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full Stack Engineer", "Artificial Intelligence Developer"];
+  const toRotate = ["Full Stack Engineer", "Artificial Intelligence Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -21,13 +20,17 @@ export const Banner = () => {
       tick();
     }, delta);
 
-    return () => { clearInterval(ticker) };
-  }, [text])
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
@@ -37,17 +40,17 @@ export const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
+      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
-    } else if (isDeleting && updatedText === '') {
+    } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
       setDelta(100);
     } else {
-      setIndex(prevIndex => prevIndex + 1);
+      setIndex((prevIndex) => prevIndex + 1);
     }
-  }
+  };
 
   return (
     <section className="banner" id="home">
@@ -55,33 +58,60 @@ export const Banner = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>Hi! I'm Ryan</h1>
-                <h2><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h2>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>Hi! I'm Ryan</h1>
+                  <h2>
+                    <span
+                      className="txt-rotate"
+                      dataPeriod="1000"
+                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                    >
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h2>
                   <p>
-                    I'm a senior majoring in Computer Science at the University of Texas at Austin, 
-                    with a minor in Business and a certificate in Applied Statistical Modeling. 
-                    I will graduate with  my master's degree by May 2026 through the integrated program, 
-                    which I began in 2024. My passion lies at the intersection of software engineering, 
-                    artificial intelligence, and finance, and I'm eager to expand my expertise and practical 
-                    skills through internships and professional opportunities.
+                    I'm a senior majoring in Computer Science at the University
+                    of Texas at Austin, with a minor in Business and a
+                    certificate in Applied Statistical Modeling. I will graduate
+                    with my master's degree by May 2026 through the integrated
+                    program, which I began in 2024. My passion lies at the
+                    intersection of software engineering, artificial
+                    intelligence, and finance, and I'm eager to expand my
+                    expertise and practical skills through internships and
+                    professional opportunities.
                   </p>
-                  <button onClick={() => window.open(Pdf, '_blank', 'noopener,noreferrer')}>Download CV <ArrowRightCircle size={25} /></button>
-              </div>}
+                  <button
+                    onClick={() =>
+                      window.open(Pdf, "_blank", "noopener,noreferrer")
+                    }
+                  >
+                    Download CV <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              )}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__zoomIn" : ""
+                  }
+                >
+                  <img src={headerImg} alt="Header Img" />
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};

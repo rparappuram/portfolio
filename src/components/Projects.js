@@ -17,14 +17,13 @@ import spending from "../assets/img/spending_score.jpg";
 import face_id from "../assets/img/face_id.jpeg";
 import ctrl_f from "../assets/img/ctrl_f.jpeg";
 import ahg from "../assets/img/ahg.jpg";
-import heart from "../assets/img/heart.webp"
-import twitter from "../assets/img/twitter.png"
-import wine from "../assets/img/wine.png"
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import heart from "../assets/img/heart.webp";
+import twitter from "../assets/img/twitter.png";
+import wine from "../assets/img/wine.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-
   const tab1 = [
     {
       title: "Stock Trading Bot",
@@ -148,31 +147,41 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Throughout my personal project history, I have strived for educational enrichment to better my understanding of computer science as well as the furtherment of science. To achiev
-                e this purpose, I've researched innovative approaches to modern technology as seen below.</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          tab1.map((tab1, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...tab1}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                    <Row>
-                    <p>In Progress! Exciting New Projects To Be Released Soon :)</p>
-                        {/* {
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__fadeIn" : ""
+                  }
+                >
+                  <h2>Projects</h2>
+                  <p>
+                    Throughout my personal project history, I have strived for
+                    educational enrichment to better my understanding of
+                    computer science as well as the furtherment of science. To
+                    achieve this purpose, I've researched innovative approaches
+                    to modern technology as seen below.
+                  </p>
+                  <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                    <Tab.Content
+                      id="slideInUp"
+                      className={
+                        isVisible ? "animate__animated animate__slideInUp" : ""
+                      }
+                    >
+                      <Tab.Pane eventKey="first">
+                        <Row>
+                          {tab1.map((tab1, index) => {
+                            return <ProjectCard key={index} {...tab1} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          <p>
+                            In Progress! Exciting New Projects To Be Released
+                            Soon :)
+                          </p>
+                          {/* {
                           tab2.map((tab2, index) => {
                             return (
                               <ProjectCard
@@ -182,12 +191,15 @@ export const Projects = () => {
                             )
                           })
                         } */}
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <Row>
-                      <p>In Progress! Exciting New Projects To Be Released Soon :)</p>
-                        {/* {
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <Row>
+                          <p>
+                            In Progress! Exciting New Projects To Be Released
+                            Soon :)
+                          </p>
+                          {/* {
                           tab3.map((tab3, index) => {
                             return (
                               <ProjectCard
@@ -197,27 +209,32 @@ export const Projects = () => {
                             )
                           })
                         } */}
-                      </Row>
-                    </Tab.Pane>
-                  </Tab.Content>
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">1</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">3</Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Tab.Container>
-              </div>}
+                        </Row>
+                      </Tab.Pane>
+                    </Tab.Content>
+                    <Nav
+                      variant="pills"
+                      className="nav-pills mb-5 justify-content-center align-items-center"
+                      id="pills-tab"
+                    >
+                      <Nav.Item>
+                        <Nav.Link eventKey="first">1</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="second">2</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="third">3</Nav.Link>
+                      </Nav.Item>
+                    </Nav>
+                  </Tab.Container>
+                </div>
+              )}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
       <img className="background-image-right" src={portfolio}></img>
     </section>
-  )
-}
+  );
+};

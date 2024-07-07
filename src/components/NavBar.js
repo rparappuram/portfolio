@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.png';
-import navIcon1 from '../assets/img/linkedin.svg';
-import navIcon2 from '../assets/img/github3.png';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
-import Pdf from '../assets/Ryan_Parappuram_resume.pdf';
+import logo from "../assets/img/logo.png";
+import navIcon1 from "../assets/img/linkedin.svg";
+import navIcon2 from "../assets/img/github3.png";
+import { BrowserRouter as Router } from "react-router-dom";
+import Pdf from "../assets/Ryan_Parappuram_resume.pdf";
 export const NavBar = () => {
-
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,16 +16,16 @@ export const NavBar = () => {
       } else {
         setScrolled(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+  };
 
   return (
     <Router>
@@ -42,20 +39,65 @@ export const NavBar = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#project" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link
+                href="#home"
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+              >
+                Home
+              </Nav.Link>
+              <Nav.Link
+                href="#skills"
+                className={
+                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("skills")}
+              >
+                Skills
+              </Nav.Link>
+              <Nav.Link
+                href="#project"
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("projects")}
+              >
+                Projects
+              </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/ryanparappuram/" target="_blank" rel="noopener,noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
-                <a href="https://github.com/rparappuram" target="_blank" rel="noopener,noreferrer"><img src={navIcon2} alt="GitHub" /></a>
+                <a
+                  href="https://www.linkedin.com/in/ryanparappuram/"
+                  target="_blank"
+                  rel="noopener,noreferrer"
+                >
+                  <img src={navIcon1} alt="LinkedIn" />
+                </a>
+                <a
+                  href="https://github.com/rparappuram"
+                  target="_blank"
+                  rel="noopener,noreferrer"
+                >
+                  <img src={navIcon2} alt="GitHub" />
+                </a>
               </div>
-                <button className="vvd" onClick={() => window.open(Pdf, '_blank', 'noopener,noreferrer')}><span>Download CV</span></button>
+              <button
+                className="vvd"
+                onClick={() =>
+                  window.open(Pdf, "_blank", "noopener,noreferrer")
+                }
+              >
+                <span>Download CV</span>
+              </button>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Router>
-  )
-}
+  );
+};
